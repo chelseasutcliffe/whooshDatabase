@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/	bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="stylesheet" href= "{{ url_for('static',filename='styles/main.css') }}">
+		<title>Language Encyclopedia</title>
+	</head>
+
+	<body>
+
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+		
+		<div class="jumbotron">
+			<h1 class="display-4">Language Encyclopedia</h1>
+			<form method="get" action="{{ url_for('results') }}">
+				<div class="form-group">
+					<input type="text" class="form-control" name="searchterm" placeholder="search..." />
+				</div>
+				<div class="form-row">
+					<div class="col">
+					    <label>Result count</label>
+					    <select class="form-control" name="limit">
+					      <option value="1">1</option>
+					      <option value="2">2</option>
+					      <option value="3">3</option>
+					      <option value="4">4</option>
+					      <option value="5">5</option>
+					      <option value="6">6</option>
+					      <option value="7">7</option>
+					      <option value="8">8</option>
+					      <option value="9">9</option>
+					      <option selected value="10">10</option>
+					      <option value="11">11</option>
+					      <option value="12">12</option>
+					      <option value="13">13</option>
+					      <option value="14">14</option>
+					      <option value="15">15</option>
+					      <option value="16">16</option>
+					      <option value="17">17</option>
+					      <option value="18">18</option>
+					      <option value="19">19</option>
+					      <option value="20">20</option>
+					    </select>
+					</div>
+					<div class="col">
+						<label>Query Type</label>
+						<select class="form-control" name="conjunctive">
+					      <option value="True">Yes</option>
+					      <option value="False">No</option>
+					    </select>
+					</div>
+				</div>
+				<input type="submit" id="search" class="btn btn-secondary" value="Search">
+			</form>	
+		</div>
+	</body>	
+</html>
